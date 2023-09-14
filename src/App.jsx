@@ -11,7 +11,7 @@ const App = () => {
 
 
   const searchMovies = async (title) => {
-    const response = await fetch(`https://www.omdbapi.com?apikey=${import.meta.VITE_API_KEY}&s=${title}`);
+    const response = await fetch(`https://www.omdbapi.com?apikey=${import.meta.env.VITE_API_KEY}&s=${title}`);
     const data = await response.json();
 
     setMovies(data.Search)
